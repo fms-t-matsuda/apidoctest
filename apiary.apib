@@ -15,60 +15,60 @@ APIドキュメントのサンプル
 ###Cブック詳細を取得する [GET]
 
 + Parameters
-    + id: `6295318` (number, optional) - idを指定
+    + id: `6201445` (number, optional) - idを指定
 
 + Response 200 (application/json)
     + Body
 
-        {
-            "success": true,
-            "result": {
-                "news": [
-                    {
-                        "id": 1,
-                        "title": "タイトル",
-                        "discription": "説明文"
-                    }
-                ]
+                {
+                    "success": true,
+                "result": {
+                    "news": [
+                        {
+                            "id": "数値エラー",
+                            "title": "タイトル",
+                            "discription": "説明文"
+                        }
+                    ]
+                }
             }
-        }
 
     + Schema
 
-        {
-            "type": "object",
-            "properties": {
-                "success": {
-                    "type": "boolean"
-                },
-                "result": {
-                    "type": "object",
-                    "properties": {
-                        "news": {
-                            "type": "array",
-                            "items": {
-                                "type": "object",
-                                "properties": {
-                                    "id": {
-                                        "type": "integer"
-                                    },
-                                    "title": {
-                                        "type": "string"
-                                    },
-                                    "description": {
-                                        "type": "string"
+            {
+                "type": "object",
+                "properties": {
+                    "success": {
+                        "type": "boolean"
+                    },
+                    "result": {
+                        "type": "object",
+                        "properties": {
+                            "news": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "integer"
+                                        },
+                                        "title": {
+                                            "type": "string"
+                                        },
+                                        "description": {
+                                            "type": "string"
+                                        }
                                     }
                                 }
                             }
                         }
                     }
-                }
-            },
-            "required": [
-                "success",
-                "result"
-            ]
-        }
+                },
+                "required": [
+                    "success",
+                    "result"
+                ]
+            }
 
 + Response 400 (application/json)
 
