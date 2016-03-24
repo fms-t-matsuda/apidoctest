@@ -45,16 +45,19 @@ APIドキュメントのサンプル
                     "type": "object",
                     "properties": {
                         "news": {
-                            "type": "object",
-                            "properties": {
-                                "id": {
-                                    "type": "integer"
-                                },
-                                "title": {
-                                    "type": "string"
-                                },
-                                "description": {
-                                    "type": "string"
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "integer"
+                                    },
+                                    "title": {
+                                        "type": "string"
+                                    },
+                                    "description": {
+                                        "type": "string"
+                                    }
                                 }
                             }
                         }
